@@ -1,41 +1,66 @@
+<!-- All pages should begin with <!DOCTYPE html>. This special string is known as a declaration and ensures the browser tries to meet industry-wide specifications. -->
 <!DOCTYPE html>
 
+<!-- 'lang' attribute with the value en to the opening html tag to specify that the language of the page is english. -->
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" /> <!-- set browser behavior by adding self-closing <meta> -->
+    <!-- 'charset' attribute to UTF-8 tells the browser to parse the markup into multiple languages by creating a meta element as a child of the head element. -->
+    <!-- For the styling of the page to look similar on mobile as it does on a desktop or laptop,
+    we need to add a meta element with a special 'content' attribute. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- The <title> element determines what browsers show in the title bar or tab for the page. -->
     <title>CatPhotoApp</title>
 </head>
 
 <body>
+    <!-- HTML5 has some elements that identify different content areas like content in the <main> element
+    These elements make HTML easier to read and help with Search Engine Optimization and accessibility. -->
     <main>
+        <!-- HTML elements have opening element like <h1> and closing element like </h1>.
+        The text for an element goes between its heading elements (h1 - h6).
+        h1 being highest and h6 being lowest element to signify importance of that text-->
+        <!-- All the h1, h2, p are nested in section elements and those are again nested in main element 
+        it is called nesting and indentation is followed to make the nesting clear-->
         <h1>CatPhotoApp</h1>
+        <!-- we should make use of a section element to separate the one content from another content. -->
         <section>
             <h2>Cat Photos</h2>
-            <!-- TODO: Add link to cat photos -->
+            <!-- <p> is the paragraph element -->
             <p>
                 See more
+                <!-- <a> is an anchor element wrapped around a text/element(like seen for below img element) which will be linked to another page
+                    using 'href' attribute, 'target' attribute with the value '_blank' so that the link opens in a new tab.  -->
                 <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>
                 in our gallery.
             </p>
+            <!-- <img> is self closing element which helps in inserting images into html with attribute 'src'
+            The 'alt' attribute's text is used for screen readers to improve accessibility and is displayed if the image fails to load. -->
+            <!-- attributes are special words given inside opening tag of element which controls it's behavior -->
             <a href="https://freecatphotoapp.com"><img
                     src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
                     alt="A cute orange cat lying on its back." /></a>
         </section>
         <section>
             <h2>Cat Lists</h2>
+            <!-- When we add a lower rank heading element to the page, it's implied that we are starting a new subsection.
+            2 <h3>sections under 1 <h2>section -->
             <h3>Things cats love:</h3>
+            <!-- <ul> is unordered list element and <li> is list item element which usually have non-numeric value displayed in front of list items-->
             <ul>
                 <li>cat nip</li>
                 <li>laser pointers</li>
                 <li>lasagna</li>
             </ul>
+            <!-- The <figure> element represents self-contained content and will allow to associate an image with a caption with <figcaption> element . -->
             <figure>
                 <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg"
                     alt="A slice of lasagna on a plate." />
-                <figcaption>Cats <em>love</em> lasagna.</figcaption>
+                <figcaption>Cats <em>love</em> lasagna.</figcaption> <!-- <em> tag is to emphasize(italic) the text -->
             </figure>
             <h3>Top 3 things cats hate:</h3>
+            <!-- ordered list (ol) is similar to an unordered list, but list items in an ordered list are numbered when displayed. -->
             <ol>
                 <li>flea treatment</li>
                 <li>thunder</li>
@@ -45,13 +70,30 @@
                 <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
                     alt="Five cats looking around a field." />
                 <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
+                <!-- <strong> tag is to strong/importance/urgent(bold) text -->
             </figure>
         </section>
         <section>
             <h2>Cat Form</h2>
+            <!-- A <form> element is a web form to collect information from users. The 'action' attribute indicates where form data should be sent. -->
             <form action="https://freecatphotoapp.com/submit-cat-photo">
+                <!-- The <fieldset> element is used to group related inputs and labels together in a web form. fieldset elements are block-level elements, meaning that they appear on a new line. -->
                 <fieldset>
+                    <!-- The <legend> element acts as a caption for the content in the fieldset element. It gives users context about what they should enter into that part of the form. -->
                     <legend>Is your cat an indoor or outdoor cat?</legend>
+                    <!-- The <input> element allows us several ways to collect data from a web form. Like img elements, input elements are self-closing and do not need closing tags.
+                    using the 'type' attribute we can easily create a text entry, password field, reset button, or a control to let users select a file from their computer.-->
+                    <!-- In order for a form's data to be accessed by the location specified in the action attribute,
+                    we must give the text field a 'name' attribute and assign it a value to represent the data being submitted. -->
+                    <!-- 'type' = radio creates a radio button, which can be used for only one selection -->
+                    <!-- <label> elements are used to help associate the text for an input element with the input element itself (especially for assistive technologies like screen readers).
+                    For example, <label><input type="radio"> cat</label> makes it so clicking the word cat also selects the corresponding radio button. -->
+                    <!-- The 'id' attribute is used to identify specific HTML elements. Each id attribute's value must be unique from all other id values for the entire page. -->
+                    <!-- both radio buttons can be selected at the same time to make it so selecting one radio button automatically deselects the other,
+                    both buttons must have a name attribute with the same value. -->
+                    <!-- If you select the Indoor radio button and submit the form, the form data for the button is based on its name and value attributes.
+                    if radio buttons do not have a value attribute, the form data will include only the name attribute that is indoor-outdoor=on, which is not useful when you have multiple buttons. -->
+                    <!-- In order to make a checkbox checked or radio button selected by default, you need to add the checked attribute to it. There's no need to set a value to the checked attribute. -->
                     <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked />
                         Indoor</label>
                     <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor" />
@@ -59,18 +101,27 @@
                 </fieldset>
                 <fieldset>
                     <legend>What's your cat's personality?</legend>
+                    <!-- 'type' = checkbox creates a checkbox button, which can be used for multi selection -->
+                    <!-- Like radio buttons, form data for selected checkboxes are name / value attribute pairs. While the value attribute is optional, it's best practice to include it with any checkboxes or radio buttons on the page. -->
                     <input id="loving" type="checkbox" name="personality" value="loving" checked />
+                    <!-- As seen in radio buttons above, input element along with it's text value was nested in label element, there is another way to associate an input element's text with the element itself.
+                    You can nest the text within a label element and add a 'for' attribute with the same value as the input element's id attribute. as seen below for all checkbox type's -->
                     <label for="loving">Loving</label>
                     <input id="lazy" type="checkbox" name="personality" value="lazy" />
                     <label for="lazy">Lazy</label>
                     <input id="energetic" type="checkbox" name="personality" value="energetic" />
                     <label for="energetic">Energetic</label>
                 </fieldset>
+                <!-- 'Placeholder' text is used to give people a hint about what kind of information to enter into an input. example, <input type="text" placeholder="Email address">. -->
+                <!-- To prevent a user from submitting your form when required information is missing, we need to add the 'required' attribute to an input element.
+                There's no need to set a value to the required attribute. Instead, just add the word required to the input element, making sure there is space between it and other attributes. -->
                 <input type="text" name="catphotourl" placeholder="cat photo URL" required />
+                <!-- <button> element to create a clickable button,'type' attribute with the value submit makes it clear that it is a submit button. -->
                 <button type="submit">Submit</button>
             </form>
         </section>
     </main>
+    <!-- <footer> section at the bottom after main element -->
     <footer>
         <p>
             No Copyright -
