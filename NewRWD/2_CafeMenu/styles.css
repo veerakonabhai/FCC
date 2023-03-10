@@ -1,0 +1,127 @@
+/* CSS file to have all the styling for elements is done and tracked at one place  */
+
+body {
+    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    /* change the font-family of text, to make it look different from the default font of the browser */
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+/* we can add style to an element by specifying it in the style element and setting a property for it called as 'type selector'*/
+/* we can also group the type selector's by separating with comma as below and they will have same style configuration */
+h1,
+h2,
+p {
+    text-align: center;
+}
+
+/* font change to h1 and h2 elements only with fallback(where the specified font is not present it check for next given font) */
+h1,
+h2 {
+    font-family: Impact, serif;
+}
+
+h1 {
+    /* The menu text CAMPER CAFE has a different space from the top than the address's space at the bottom of the menu.
+    This is due to the browser having some default top margin for the h1 element. keeping it zero to remove the top margin*/
+    margin-top: 0px;
+    /* To remove some of the vertical space between the h1 element and the text Est. 2020, changing the bottom margin of the h1 to 15px. */
+    margin-bottom: 15px;
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+/* for Est. 2020 text */
+.established {
+    font-style: italic;
+}
+
+hr {
+    height: 2px;
+    background-color: brown;
+    border-color: brown;
+    /* Borders are also occupy 1px size and Each side of an element can have a different color or they can all be the same */
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* h2 elements have default top and bottom margin space, to reduce gap between h2 element and it's icon image use negative margin */
+    margin-top: -25px;
+}
+
+/* above 'body', 'h1', 'h2', 'p' are examples of type selector and below is class selector example,
+ where <div> element is styled using it's class attribute from html file. Class selector use dot notation */
+.menu {
+    /* To make the div not take up the entire width of the page CSS width property is perfect for this. */
+    /* width property can be given as {number}px pixels way or {number}% percentage of parent element*/
+    width: 80%;
+    background-color: burlywood;
+    /* To center the div horizontally. we can set margin-left and margin-right properties to auto.
+    Think of the margin as invisible space around an element. */
+    margin-left: auto;
+    margin-right: auto;
+    /* padding properties helps in giving some space between content and the sides */
+    padding: 20px;
+    /* max-width helps restricting the elements size, helpful when large screens or tabs are used, our element does not stretches */
+    max-width: 500px;
+}
+
+/* The p elements are nested in an article element with the class attribute of item.
+we can style all the p elements nested anywhere in elements with a class named item like this */
+.item p {
+    margin-top: 5px;
+    /* to reduce the gap between menu items we reduced the margin to 5px */
+    margin-bottom: 5px;
+    display: inline-block;
+    font-size: 18px;
+}
+
+/* inline-block elements only take up the width of their content. 
+To spread them out, let's add a width property to the flavor and price class selectors */
+
+/* for flavor and dessert class */
+.flavor,
+.dessert {
+    text-align: left;
+    width: 75%;
+}
+
+/* for price class */
+.price {
+    text-align: right;
+    width: 25%;
+}
+
+.bottom-line {
+    margin-top: 25px;
+}
+
+/* FOOTER related styling*/
+footer {
+    font-size: 14px;
+}
+
+.address {
+    margin-bottom: 5px;
+}
+
+a {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: brown;
+}
+
+a:active {
+    color: brown;
+}

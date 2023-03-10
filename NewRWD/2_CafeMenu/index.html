@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafe Menu</title>
+    <!-- This commented code is one way of styling the html file within the html file
+    <style> element to help us regarding the presentation and appearance of the content we create
+    <style>
+    /* we can add style to an element by specifying it in the style element and setting a property for it called as 'type selector'*/
+    /* we can also group the type selector's by separating with comma as below and they will have same style configuration */
+      h1, h2, p {
+        text-align: center;
+      }
+    </style> -->
+    <!-- to link the styles.css file so the styles will be applied again. Nest a self-closing link element in the head element.
+    Give it a 'rel' attribute value stylesheet and an 'href' attribute value of styles.css.
+    This is another way when working with css files rather then styling in html itself like above commented code-->
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- The div element is used mainly for design layout purposes unlike the other content elements you have used so far -->
+    <!-- 'class' attribute to the div element helps in linking the class selector from the reference CSS style file -->
+    <div class="menu">
+        <main>
+            <h1>CAMPER CAFE</h1>
+            <p class="established">Est. 2020</p>
+            <hr>
+            <!-- section for Coffee -->
+            <section>
+                <h2>Coffee</h2>
+                <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="coffee icon">
+                <!-- <article> elements commonly contain multiple elements that have related information.
+                In this case, it will contain a coffee flavor and a price for that flavor -->
+                <!-- p elements are block-level elements, so they take up the entire width of their parent element
+                To get them on the same line, let's add some styling to the p elements, so they behave more like inline elements.
+                Add a class attribute which help us in CSS -->
+                <article class="item">
+                    <!-- adding a class to style the elements, otherwise thy would be stacked on top of themselves as in given order -->
+                    <p class="flavor">French Vanilla</p><p class="price">3.00</p>
+                </article>
+                <article class="item">
+                    <p class="flavor">Caramel Macchiato</p><p class="price">3.75</p>
+                </article>
+                <article class="item">
+                    <p class="flavor">Pumpkin Spice</p><p class="price">3.50</p>
+                </article>
+                <article class="item">
+                    <p class="flavor">Hazelnut</p><p class="price">4.00</p>
+                </article>
+                <article class="item">
+                    <p class="flavor">Mocha</p><p class="price">4.50</p>
+                </article>
+            </section>
+            <!-- section for Desserts -->
+            <section>
+                <h2>Desserts</h2>
+                <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg" alt="pie icon">
+                <article class="item">
+                    <p class="dessert">Donut</p><p class="price">1.50</p>
+                </article>
+                <article class="item">
+                    <p class="dessert">Cherry Pie</p><p class="price">2.75</p>
+                </article>
+                <article class="item">
+                    <p class="dessert">Cheesecake</p><p class="price">3.00</p>
+                </article>
+                <article class="item">
+                    <p class="dessert">Cinnamon Roll</p><p class="price">2.50</p>
+                </article>
+            </section>
+        </main>
+        <hr class="bottom-line">
+        <footer>
+            <p><a href="https://www.freecodecamp.org">Visit our website</a></p>
+            <p class="address">123 Free Code Camp Drive</p>
+        </footer>
+    </div>
+</body>
+
+</html>
