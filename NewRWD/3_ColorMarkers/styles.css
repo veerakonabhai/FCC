@@ -1,0 +1,85 @@
+h1 {
+    text-align: center;
+}
+
+.container {
+    /* rbg(red,blue,green) is function which works with colors where red, blue, green can have value 0 to 255 */
+    background-color: rgb(255, 255, 255);
+    /* multiple values works in same way as given in below margin notes */
+    padding: 10px 0px;
+}
+
+.marker {
+    height: 25px;
+    width: 200px;
+    /* 'margin' alone gives margin on all sides and keeps the div in center, usually top and bottom has 0 margin
+    in that case so to give some margin top and bottom we can use shorthand margin property with two values
+    first value is used by top and bottom, next one for left and right*/
+    margin: 10px auto;
+}
+
+.cap {
+    width: 60px;
+    height: 25px;
+}
+
+.sleeve {
+    width: 110px;
+    height: 25px;
+    /* rgba() takes the color along with alpha channel value at last parameter which helps in opacity */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* border-left-width: 10px;
+    border-left-style: solid;
+    border-left-color: black; */
+    /* instead of above there we can give directly as border-left: width style color; */
+    border-left: 10px double rgba(0, 0, 0, 0.75);
+}
+
+.cap,
+.sleeve {
+    display: inline-block;
+}
+
+.red {
+    /* value way of giving colors, limited color values */
+    /* background-color: red; */
+    /* functional way of giving colors, many colors are possible */
+    /* background-color: rgb(255, 0, 0); */
+    /* A gradient is when one color transitions into another. The CSS linear-gradient function lets you control the direction of the transition along a line, and which colors are used
+    One thing to remember is that the linear-gradient function actually creates an image element, and is usually paired with the background property which can accept an image as a value */
+    /* The linear-gradient function is very flexible ```linear-gradient(gradientDirection, color1, color2, ...);```
+    gradientDirection is the direction of the line used for the transition. color1 and color2 are color arguments, which are the colors that will be used in the transition itself */
+    /* Color-stops allow you to fine-tune where colors are placed along the gradient line in the linear-gradient function given after a color */
+    /* Now that the color-stops are set, apply different shades of red to each color argument in the linear-gradient function.
+    The shades on the top and bottom edges of the marker will be darker, while the one in the middle will be lighter, as if there's a light above it. */
+    /* background: linear-gradient(180deg, rgb(122, 74, 14) 0%, rgb(245, 62, 113) 50%, rgb(162, 27, 27) 100%); */
+    /* The linear-gradient function automatically calculates above values, and places colors evenly along the gradient line by default
+    so without color stops also it is good, if we want specific %age cover then we can use teh above line and give values*/
+    background: linear-gradient(180deg, rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+    /* box-shadow: offsetX offsetY color; - both offsetX and offsetY accept number values in px and other CSS units
+    a positive offsetX value moves the shadow right and a negative value moves it left, a positive offsetY value moves the shadow down and a negative value moves it up
+    The height and width of the shadow is determined by the height and width of the element it's applied to. You can also use an optional spreadRadius value to spread out the reach of the shadow. */
+    /* box-shadow: 5px 5px red; */
+    /* box-shadow: offsetX offsetY blurRadius color; - blurRadius is an optional value to determine sharpness at edges(default is 0 when not included like in above) */
+    /* box-shadow: offsetX offsetY blurRadius spreadRadius color; - spreadRadius is another optional value to expand the shadow out further */
+    box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
+}
+
+.green {
+    /* another way of color code is using hexadecimal or hex values, starts with # and then by 6 characters 
+    value range is 0-9 and A-F first 2 char are for red, next 2 for green last 2 for blue(similar to RGB) as seen below */
+    /* background-color: #007F00; */
+    background: linear-gradient(180deg, #55680D, #71F53E, #116C31);
+    box-shadow: 0 0 20px 0 #3B7E20CC;
+}
+
+.blue {
+    /* HSL(hue, saturation, lightness) is another way for color coding
+    values: a num from 0 to 360 for hue, a % from 0 to 100 for saturation, and a % from 0 to 100 for lightness. */
+    /* imagine a color wheel, the hue red is at 0 degrees, green is at 120 degrees, and blue is at 240 degrees.
+    Saturation is the intensity of a color from 0%, or gray, to 100% for pure color.
+    Lightness is how bright a color appears, from 0%, or complete black, to 100%, complete white, with 50% being neutral. */
+    /* background-color: hsl(240, 100%, 50%) */
+    background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+    box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
+}
