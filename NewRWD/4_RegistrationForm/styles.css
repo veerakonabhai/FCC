@@ -1,0 +1,95 @@
+body {
+    width: 100%;
+    /* The vh unit stands for viewport height, and is relative to 1% of the height of the viewport */
+    height: 100vh;
+    /* margin:0 removes the horizontal scroll bar(some browsers can see them)*/
+    margin: 0;
+    height: 100vh;
+    color: #f5f6f7;
+    background-color: #1b1b32;
+    font-family: Tahoma;
+    font-size: 16px;
+}
+
+label {
+    /* to make the all input's into block scope, default are inline and they will look in same line if block is not given */
+    display: block;
+    /* The rem unit stands for root em, and is relative to the font size of the html element */
+    margin: 0.5rem 0;
+}
+
+h1,
+p {
+    margin: 1em auto;
+    text-align: center;
+}
+
+form {
+    /* margin: 0 auto; - center's the element */
+    margin: 0 auto;
+    max-width: 500px;
+    min-width: 300px;
+    width: 60vw;
+    padding-bottom: 2em;
+}
+
+fieldset {
+    border: 0;
+    padding: 2rem 0;
+    border-bottom: 3px solid #3b3b4f;
+}
+
+/* The border of the last fieldset element looks a little out of place if we don't give this piece of code.
+we can select the last element of a specific type using the last-of-type CSS pseudo-class, like below */
+fieldset:last-of-type {
+    border-bottom: none;
+}
+
+/* to make the label text appear above the given form elements */
+input,
+textarea,
+select {
+    width: 100%;
+    margin: 0;
+    margin-top: 10px;
+    min-height: 2em;
+}
+
+/* this inline class is created to want to make the second fieldset elements to have label text value beside them */
+.inline {
+    /* 'unset' will remove the 100% value given above  */
+    width: unset;
+    /* margin: 0;
+    margin-right: 0.5em; */
+    margin: 0 0.5em 0 0;
+    /* this will align the elements with text otherwise the inline elements are too high on the line */
+    vertical-align: middle;
+}
+
+input,
+textarea {
+    background-color: #0a0a23;
+    border: 1px solid #0a0a23;
+    color: #ffffff;
+}
+
+/* attribute selector - selects an element based on the given attribute value
+below is for the Submit button */
+input[type="submit"] {
+    display: block;
+    width: 60%;
+    min-width: 200px;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #3b3b4f;
+    border-color: white;
+}
+
+input[type="file"] {
+    padding: 1px 2px;
+}
+
+a {
+    color: #dfdfe2;
+}
