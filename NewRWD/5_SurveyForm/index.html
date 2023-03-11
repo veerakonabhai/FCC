@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 id="title">My First Survey</h1>
+    <p id="description">This is freeCodeCamp's first certification project in the Responsive web design curriculum</p>
+    <form id="survey-form">
+        <label id="name-label">Enter your name: <input required id="name" type="text" placeholder="your name" /></label>
+        <label id="email-label">Enter your email: <input required id="email" type="email" placeholder="your email" /></label>
+        <label id="number-label">Enter a Number: <input id="number" type="number" placeholder="enter any number between 10 and 100"
+                min="10" max="100" /></label>
+        <label id="dropdown-label">Dropdown
+            <select id="dropdown">
+                <option>first option</option>
+                <option>second option</option>
+            </select></label>
+        <label>
+            <input checked type="radio" name="radio-group" value="radio1"/>First radio button
+        </label>
+        <label>
+            <input type="radio" name="radio-group" value="radio2"/>second radio button
+        </label>
+        <label>
+            <input checked type="checkbox" name="checkbox-group" value="checkbox1"/>First checkbox button
+        </label>
+        <label>
+            <input type="checkbox" name="checkbox-group" value="checkbox2"/>second checkbox button
+        </label>
+        <label>
+            <textarea placeholder="text box"></textarea>
+        </label>
+        <button id="submit" type="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>
