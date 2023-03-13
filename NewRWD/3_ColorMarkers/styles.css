@@ -54,7 +54,7 @@ h1 {
     The shades on the top and bottom edges of the marker will be darker, while the one in the middle will be lighter, as if there's a light above it. */
     /* background: linear-gradient(180deg, rgb(122, 74, 14) 0%, rgb(245, 62, 113) 50%, rgb(162, 27, 27) 100%); */
     /* The linear-gradient function automatically calculates above values, and places colors evenly along the gradient line by default
-    so without color stops also it is good, if we want specific %age cover then we can use teh above line and give values*/
+    so without color stops also it is good, if we want specific %age cover then we can use the above line and give values*/
     background: linear-gradient(180deg, rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
     /* box-shadow: offsetX offsetY color; - both offsetX and offsetY accept number values in px and other CSS units
     a positive offsetX value moves the shadow right and a negative value moves it left, a positive offsetY value moves the shadow down and a negative value moves it up

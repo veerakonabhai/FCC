@@ -1,5 +1,5 @@
 /* Debugging is the process of going through your code, finding any issues, and fixing them. */
-/* we use Developer tools of browsers to debug teh JS in web-pages */
+/* we use Developer tools of browsers to debug the JS in web-pages */
 // console.log() - prints the value within the parenthesis to console
 let a = 5;
 console.log(a); //5
@@ -13,7 +13,7 @@ console.log(typeof ""); //string
 console.log(typeof 0); //number
 console.log(typeof []); //object
 console.log(typeof {}); //object
-/* "Syntax" type errors are displayed on teh console, common ype are reference error usually caused 
+/* "Syntax" type errors are displayed on the console, common ype are reference error usually caused 
 by missing or mis-typed  variable or function name*/
 /* let correctVar = "some value";
 console.log(corectVar); // ReferenceError: corectVar is not defined */
