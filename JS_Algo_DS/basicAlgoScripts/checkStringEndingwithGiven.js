@@ -4,7 +4,7 @@ function confirmEnding(str, target) {
     /* let endRegex = new RegExp(target+'$');
     return endRegex.test(str); */
 
-    //using splice method - cut the string for given target length and see if it is same as target
+    //using slice method - cut the string for given target length and see if it is same as target
     /* return str.slice(-target.length) === target */
     return str.slice(str.length - target.length) === target;
 }
