@@ -22,4 +22,4 @@ function repeatStringNumTimes(str, num) {
 }
 
 console.log(repeatStringNumTimes("abc", 3)); //abcabcabc
-console.log(repeatStringNumTimes("something", -1)); //
+console.log(repeatStringNumTimes("something", -1)); // '' empty string as second param is negative number
